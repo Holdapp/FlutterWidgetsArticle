@@ -115,10 +115,7 @@ class _CCCParallaxScrollingPageState extends State<CCCParallaxScrollingPage> {
 
   Widget _actionIcon() => Positioned(
         top: screenHeight * 0.2 + kTextTabBarHeight - scrollingOffset,
-
-        /// Ensure not bouncing back
-        right:
-            16 - scrollingOffset * 0.25 > 16 ? 16 : 16 - scrollingOffset * 0.25,
+        right: 16 - scrollingOffset * 0.25,
         child: IconButton(
           onPressed: () => setState(() => _isFavorite = !_isFavorite),
           icon: Icon(
